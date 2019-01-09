@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datapipe"
+version = "0.1.0"
+description = "A composable, declarative data transformation and pipeline library."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "ErvinTse", email = "36804877+helbok@users.noreply.github.com" }]
+requires-python = ">=3.7"
+keywords = ["data", "pipeline", "etl", "transformation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "typing-extensions >= 4.0.0",
+]
+
+[project.optional-dependencies]
+csv = [
+    "python-dateutil >= 2.8.0",
+]
+sql = [
+    "sqlalchemy >= 1.4.0",
+]
+test = [
+    "pytest >= 6.0.0",
+]
+
+[project.scripts]
+datapipe = "datapipe.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
