@@ -3,3 +3,16 @@
 This guide walks through the main concepts in `datapipe` with short,
 runnable examples.
 
+## Building a first pipeline
+
+A `Pipeline` owns a `Graph`. `source()` attaches a reader, `map()` and
+`filter()` reshape the stream, and `sink()` attaches a writer. Nothing runs
+until `run()` is called, which is what makes pipelines cheap to compose.
+
+```python
+pipe = dp.Pipeline("demo")
+rows = pipe.source("in.csv", "csv")
+rows = pipe.filter(rows, field="active")
+pipe.sink(rows, "out.json", "json")
+pipe.run()
+```
