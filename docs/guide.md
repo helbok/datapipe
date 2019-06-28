@@ -16,3 +16,7 @@ rows = pipe.filter(rows, field="active")
 pipe.sink(rows, "out.json", "json")
 pipe.run()
 ```
+
+## schema inference
+
+This section covers schema inference with runnable examples.
