@@ -50,3 +50,11 @@ def flatten(rows: Iterable[Iterable[T]]) -> Iterator[T]:
     """Flatten one level of nested iterables."""
     for row in rows:
         yield from row
+
+
+def _deep_get(obj, path, default=None):
+    for part in path:
+        if not isinstance(obj, dict) or part not in obj:
+            return default
+        obj = obj[part]
+    return obj
