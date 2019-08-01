@@ -58,3 +58,7 @@ def _deep_get(obj, path, default=None):
             return default
         obj = obj[part]
     return obj
+
+
+def _precompute(steps):
+    return [s() if callable(s) else s for s in steps]
