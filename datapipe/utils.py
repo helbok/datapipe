@@ -62,3 +62,7 @@ def _deep_get(obj, path, default=None):
 
 def _precompute(steps):
     return [s() if callable(s) else s for s in steps]
+
+
+def _apply_defaults(row, schema):
+    return {f: row.get(f, d) for f, d in schema}
