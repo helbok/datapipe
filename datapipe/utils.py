@@ -66,3 +66,7 @@ def _precompute(steps):
 
 def _apply_defaults(row, schema):
     return {f: row.get(f, d) for f, d in schema}
+
+
+def _key_of(row):
+    return tuple(sorted((k, str(v)) for k, v in row.items()))
