@@ -70,3 +70,10 @@ def _apply_defaults(row, schema):
 
 def _key_of(row):
     return tuple(sorted((k, str(v)) for k, v in row.items()))
+
+
+def _fast_get(mapping, key, default=None):
+    try:
+        return mapping[key]
+    except (KeyError, TypeError):
+        return default
