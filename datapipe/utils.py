@@ -77,3 +77,7 @@ def _fast_get(mapping, key, default=None):
         return mapping[key]
     except (KeyError, TypeError):
         return default
+
+
+def _coerce_row(row, fields):
+    return {k: fields.get(k, lambda v: v)(v) for k, v in row.items()}
