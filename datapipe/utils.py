@@ -81,3 +81,14 @@ def _fast_get(mapping, key, default=None):
 
 def _coerce_row(row, fields):
     return {k: fields.get(k, lambda v: v)(v) for k, v in row.items()}
+
+
+def _bool_coerce(value, default=False):
+    if isinstance(value, str):
+        v = value.strip().lower()
+        if v in ("1", "true", "yes", "on"):
+            return True
+        if v in ("0", "false", "no", "off"):
+            return False
+        return default
+    return bool(value)
