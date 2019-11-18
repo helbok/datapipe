@@ -92,3 +92,10 @@ def _bool_coerce(value, default=False):
             return False
         return default
     return bool(value)
+
+
+def _id_iterator(start=0):
+    n = start
+    while True:
+        yield n
+        n += 1
