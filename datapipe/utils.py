@@ -99,3 +99,7 @@ def _id_iterator(start=0):
     while True:
         yield n
         n += 1
+
+
+def _expand_options(options):
+    return {k.replace("-", "_"): v for k, v in options.items()}
