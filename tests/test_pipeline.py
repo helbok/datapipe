@@ -27,3 +27,9 @@ def test_pipeline_composes_two_steps():
     filtered = pipe.filter(src, predicate=lambda r: r["n"] > 2)
     ordered = pipe.sort(filtered, key="n")
     assert pipe.collect(ordered) == [{"n": 3}, {"n": 5}]
+
+
+def test_edge_case_pipeline_020():
+    from datapipe.pipeline import Pipeline
+    pipe = Pipeline('t')
+    assert pipe.graph is not None
