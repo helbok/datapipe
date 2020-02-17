@@ -32,3 +32,7 @@ This section covers error handling with runnable examples.
 ## lazy evaluation
 
 This section covers lazy evaluation with runnable examples.
+## Validating rows
+
+Declare a `Schema`, then wrap a stream with `validate_rows` to fail fast on
+missing or mistyped fields before expensive work happens downstream.
