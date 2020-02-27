@@ -6,3 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
+
+## [0.1.0] - 2020-02-26
+
+### Added
+
+- Lazy graph execution (Node, Dataset, Graph).
+- Pipeline builder with map, filter, select, aggregate and sort.
+- CSV and JSON sources and sinks.
+- Schema model with inference and validation.
+

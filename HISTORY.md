@@ -7,3 +7,4 @@
 
 | Date | Version | Milestone |
 | ---- | ------- | --------- |
+| 2020-02-26 | 0.1.0 | Initial public release |
