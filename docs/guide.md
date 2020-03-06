@@ -36,3 +36,7 @@ This section covers lazy evaluation with runnable examples.
 
 Declare a `Schema`, then wrap a stream with `validate_rows` to fail fast on
 missing or mistyped fields before expensive work happens downstream.
+
+## schema inference
+
+This section covers schema inference with runnable examples.
