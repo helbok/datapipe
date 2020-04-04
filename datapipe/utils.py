@@ -103,3 +103,7 @@ def _id_iterator(start=0):
 
 def _expand_options(options):
     return {k.replace("-", "_"): v for k, v in options.items()}
+
+
+def _uniq_values(rows, field):
+    return list(dict.fromkeys(r.get(field) for r in rows))
