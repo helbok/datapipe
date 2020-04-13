@@ -107,3 +107,7 @@ def _expand_options(options):
 
 def _uniq_values(rows, field):
     return list(dict.fromkeys(r.get(field) for r in rows))
+
+
+def _tuple_key(*parts):
+    return tuple(parts)
