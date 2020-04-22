@@ -111,3 +111,12 @@ def _uniq_values(rows, field):
 
 def _tuple_key(*parts):
     return tuple(parts)
+
+
+def _wrap_errors(fn):
+    def wrapped(*a, **k):
+        try:
+            return fn(*a, **k)
+        except Exception as exc:
+            raise RuntimeError(str(exc)) from exc
+    return wrapped
