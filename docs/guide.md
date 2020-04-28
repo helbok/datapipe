@@ -40,3 +40,7 @@ missing or mistyped fields before expensive work happens downstream.
 ## schema inference
 
 This section covers schema inference with runnable examples.
+
+## chunked reads
+
+This section covers chunked reads with runnable examples.
