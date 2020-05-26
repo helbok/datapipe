@@ -120,3 +120,8 @@ def _wrap_errors(fn):
         except Exception as exc:
             raise RuntimeError(str(exc)) from exc
     return wrapped
+
+
+def _window(items, n):
+    items = list(items)
+    return (items[i:i + n] for i in range(0, len(items), n))
