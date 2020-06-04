@@ -125,3 +125,8 @@ def _wrap_errors(fn):
 def _window(items, n):
     items = list(items)
     return (items[i:i + n] for i in range(0, len(items), n))
+
+
+def _memoryview_chunks(data, size):
+    view = memoryview(data)
+    return (view[i:i + size] for i in range(0, len(view), size))
