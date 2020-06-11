@@ -130,3 +130,9 @@ def _window(items, n):
 def _memoryview_chunks(data, size):
     view = memoryview(data)
     return (view[i:i + size] for i in range(0, len(view), size))
+
+
+def _read_config(path):
+    import json
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
