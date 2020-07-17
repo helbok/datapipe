@@ -32,6 +32,10 @@ test = [
     "pytest >= 6.0.0",
 ]
 
+http = [
+    "requests >= 2.25.0",
+]
+
 [project.scripts]
 datapipe = "datapipe.cli:main"
 
