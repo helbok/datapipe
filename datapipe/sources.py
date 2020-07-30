@@ -26,7 +26,8 @@ def read_csv(location, **options):
                   encoding=options.get("encoding", "utf-8")) as f:
             reader = csv.DictReader(f)
             for row in reader:
-                yield row
+                if row:
+                    yield row
     return _read
 
 
