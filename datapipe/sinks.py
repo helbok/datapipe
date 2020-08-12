@@ -13,6 +13,8 @@ def create_sink(kind, location, **options):
         return write_json(location, **options)
     if kind == "memory":
         return write_memory(options)
+    if kind == "parquet":
+        return write_parquet(location, **options)
     raise SinkError(f"unknown sink kind: {kind}")
 
 
@@ -60,4 +62,15 @@ def write_memory(options):
         for row in rows:
             buffer.append(dict(row))
         yield {"rows_written": len(buffer)}
+    return _write
+
+
+def write_parquet(location, **options):
+    def _write(rows):
+        import pyarrow as pa
+        import pyarrow.parquet as pq
+        data = list(rows)
+        table = pa.Table.from_pylist(data)
+        pq.write_table(table, location)
+        yield {"rows_written": len(data)}
     return _write
