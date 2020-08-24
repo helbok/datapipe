@@ -36,6 +36,10 @@ http = [
     "requests >= 2.26.0",
 ]
 
+parquet = [
+    "pyarrow >= 6.0.0",
+]
+
 [project.scripts]
 datapipe = "datapipe.cli:main"
 
