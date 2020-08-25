@@ -37,7 +37,7 @@ http = [
 ]
 
 parquet = [
-    "pyarrow >= 6.0.0",
+    "pyarrow >= 7.0.0",
 ]
 
 [project.scripts]
