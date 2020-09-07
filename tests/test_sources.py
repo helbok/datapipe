@@ -26,3 +26,15 @@ def test_read_json_yields_list_items():
     path = _tmp("in.json", '[{"id": 1}, {"id": 2}]')
     src = create_source("json", path)
     assert list(src(iter(()))) == [{"id": 1}, {"id": 2}]
+
+
+def test_create_source_knows_http():
+    from datapipe.sources import create_source
+    src = create_source("http", "https://example.com/api")
+    assert callable(src)
+
+
+def test_create_source_knows_sql():
+    from datapipe.sources import create_source
+    src = create_source("sql", "SELECT * FROM t")
+    assert callable(src)
