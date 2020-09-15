@@ -21,3 +21,9 @@ def test_write_memory_collects_rows():
     sink = create_sink("memory", None, buffer=buffer)
     list(sink(iter([{"a": 1}])))
     assert buffer == [{"a": 1}]
+
+
+def test_create_sink_knows_parquet():
+    from datapipe.sinks import create_sink
+    sink = create_sink("parquet", "out.parquet")
+    assert callable(sink)
