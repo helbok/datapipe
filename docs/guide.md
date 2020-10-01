@@ -44,3 +44,11 @@ This section covers schema inference with runnable examples.
 ## chunked reads
 
 This section covers chunked reads with runnable examples.
+## Reading from APIs and databases
+
+The `http` and `sql` source kinds fetch JSON from a URL or run a query through
+SQLAlchemy. Install the matching extras to enable them:
+
+```console
+$ pip install "datapipe[http,sql,parquet]"
+```
