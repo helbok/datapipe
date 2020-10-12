@@ -8,3 +8,4 @@
 | Date | Version | Milestone |
 | ---- | ------- | --------- |
 | 2020-02-26 | 0.1.0 | Initial public release |
+| 2020-10-12 | 0.2.0 | New sources and sinks |
