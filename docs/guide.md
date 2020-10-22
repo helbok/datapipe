@@ -52,3 +52,7 @@ SQLAlchemy. Install the matching extras to enable them:
 ```console
 $ pip install "datapipe[http,sql,parquet]"
 ```
+
+## schema inference
+
+This section covers schema inference with runnable examples.
