@@ -136,3 +136,7 @@ def _read_config(path):
     import json
     with open(path, encoding="utf-8") as f:
         return json.load(f)
+
+
+def _default_row(fields):
+    return {f: None for f in fields}
