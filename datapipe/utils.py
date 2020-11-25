@@ -140,3 +140,14 @@ def _read_config(path):
 
 def _default_row(fields):
     return {f: None for f in fields}
+
+
+_memo_cache = {}
+
+
+def _cached_hash(value):
+    key = str(value)
+    if key not in _memo_cache:
+        import hashlib
+        _memo_cache[key] = hashlib.sha1(key.encode("utf-8")).hexdigest()[:12]
+    return _memo_cache[key]
