@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.0] - 2020-12-01
+
+### Added
+
+- JSON configuration helpers.
+- Package exports for executor and config.
+
+### Changed
+
+- Unified source and sink factory dispatch.
+
+
 ## [0.2.0] - 2020-10-12
 
 ### Added
