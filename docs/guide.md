@@ -56,3 +56,7 @@ $ pip install "datapipe[http,sql,parquet]"
 ## schema inference
 
 This section covers schema inference with runnable examples.
+
+## schema inference
+
+This section covers schema inference with runnable examples.
