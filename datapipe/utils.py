@@ -151,3 +151,9 @@ def _cached_hash(value):
         import hashlib
         _memo_cache[key] = hashlib.sha1(key.encode("utf-8")).hexdigest()[:12]
     return _memo_cache[key]
+
+
+def _merge_rows(a, b):
+    out = dict(a)
+    out.update(b)
+    return out
