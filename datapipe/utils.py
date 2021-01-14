@@ -157,3 +157,14 @@ def _merge_rows(a, b):
     out = dict(a)
     out.update(b)
     return out
+
+
+def _batch_of(iterable, size):
+    batch = []
+    for item in iterable:
+        batch.append(item)
+        if len(batch) >= size:
+            yield batch
+            batch = []
+    if batch:
+        yield batch
