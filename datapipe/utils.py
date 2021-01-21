@@ -168,3 +168,9 @@ def _batch_of(iterable, size):
             batch = []
     if batch:
         yield batch
+
+
+def _resolve_dotted(name):
+    module, _, attr = name.rpartition(".")
+    import importlib
+    return getattr(importlib.import_module(module), attr)
