@@ -34,3 +34,10 @@ def test_edge_case_utils_008():
     assert list(chunks([1, 2, 3, 4], 2)) == [[1, 2], [3, 4]]
     assert list(flatten([[1], [2, 3]])) == [1, 2, 3]
     assert coerce_bool('yes') is True
+
+
+def test_edge_case_utils_008():
+    from datapipe.utils import chunks, flatten, coerce_bool
+    assert list(chunks([1, 2, 3, 4], 2)) == [[1, 2], [3, 4]]
+    assert list(flatten([[1], [2, 3]])) == [1, 2, 3]
+    assert coerce_bool('yes') is True
