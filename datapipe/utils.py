@@ -174,3 +174,7 @@ def _resolve_dotted(name):
     module, _, attr = name.rpartition(".")
     import importlib
     return getattr(importlib.import_module(module), attr)
+
+
+def _split_once(text, sep):
+    return text.split(sep, 1)
