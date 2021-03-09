@@ -178,3 +178,13 @@ def _resolve_dotted(name):
 
 def _split_once(text, sep):
     return text.split(sep, 1)
+
+
+_regex_cache = {}
+
+
+def _compiled(pattern):
+    import re
+    if pattern not in _regex_cache:
+        _regex_cache[pattern] = re.compile(pattern)
+    return _regex_cache[pattern]
