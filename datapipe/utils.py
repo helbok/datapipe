@@ -188,3 +188,9 @@ def _compiled(pattern):
     if pattern not in _regex_cache:
         _regex_cache[pattern] = re.compile(pattern)
     return _regex_cache[pattern]
+
+
+def _build_sink(target):
+    if hasattr(target, "write"):
+        return target
+    return open(target, "w", encoding="utf-8")
