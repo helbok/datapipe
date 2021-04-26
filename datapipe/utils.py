@@ -194,3 +194,7 @@ def _build_sink(target):
     if hasattr(target, "write"):
         return target
     return open(target, "w", encoding="utf-8")
+
+
+def _clean_header(header):
+    return [str(h).strip().lower() for h in header]
