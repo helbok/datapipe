@@ -198,3 +198,10 @@ def _build_sink(target):
 
 def _clean_header(header):
     return [str(h).strip().lower() for h in header]
+
+
+def _index_by_key(rows, key):
+    index = {}
+    for row in rows:
+        index.setdefault(row.get(key), []).append(row)
+    return index
