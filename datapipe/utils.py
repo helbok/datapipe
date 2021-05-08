@@ -205,3 +205,7 @@ def _index_by_key(rows, key):
     for row in rows:
         index.setdefault(row.get(key), []).append(row)
     return index
+
+
+def _normalize_rows(rows):
+    return ({k: ("" if v is None else v) for k, v in r.items()} for r in rows)
