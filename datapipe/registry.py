@@ -27,3 +27,16 @@ class Registry:
 
 
 registry = Registry()
+
+
+def register_builtins():
+    from datapipe.steps import (make_aggregate, make_filter, make_map,
+                                make_select, make_sort)
+    registry.register("map", make_map)
+    registry.register("filter", make_filter)
+    registry.register("select", make_select)
+    registry.register("aggregate", make_aggregate)
+    registry.register("sort", make_sort)
+
+
+register_builtins()
