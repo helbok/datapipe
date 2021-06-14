@@ -16,6 +16,7 @@ def build_parser():
     run.add_argument("--sink-kind", default="csv")
     run.add_argument("--filter", dest="filter_expr", default=None)
 
+    sub.add_parser("nodes", help="list registered steps")
     sub.add_parser("version", help="print the version")
     return parser
 
@@ -23,6 +24,21 @@ def build_parser():
 def main(argv=None):
     parser = build_parser()
     args = parser.parse_args(argv)
+    if args.command == "nodes":
+        from datapipe.registry import registry
+        try:
+            from rich.console import Console
+            from rich.table import Table
+            console = Console()
+            table = Table(title="Registered steps")
+            table.add_column("Name")
+            for name in registry.names():
+                table.add_row(name)
+            console.print(table)
+        except ImportError:
+            for name in registry.names():
+                print(name)
+        return 0
     if args.command == "version":
         from datapipe import __version__
         print(__version__)
