@@ -40,6 +40,10 @@ parquet = [
     "pyarrow >= 7.0.0",
 ]
 
+cli = [
+    "rich >= 10.0.0",
+]
+
 [project.scripts]
 datapipe = "datapipe.cli:main"
 
