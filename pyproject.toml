@@ -41,7 +41,7 @@ parquet = [
 ]
 
 cli = [
-    "rich >= 10.0.0",
+    "rich >= 12.0.0",
 ]
 
 [project.scripts]
