@@ -44,6 +44,10 @@ cli = [
     "rich >= 12.0.0",
 ]
 
+dev = [
+    "coverage >= 5.5",
+]
+
 [project.scripts]
 datapipe = "datapipe.cli:main"
 
