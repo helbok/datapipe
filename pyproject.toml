@@ -45,7 +45,7 @@ cli = [
 ]
 
 dev = [
-    "coverage >= 5.5",
+    "coverage >= 6.0",
 ]
 
 [project.scripts]
