@@ -68,3 +68,8 @@ This section covers chunked reads with runnable examples.
 ## error handling
 
 This section covers error handling with runnable examples.
+## Caching intermediate results
+
+Wrap an expensive stage with a `Cache` to reuse its output across runs. Cache
+keys are content-addressed from the stage name and its parameters, so changing
+an input parameter naturally invalidates the entry.
