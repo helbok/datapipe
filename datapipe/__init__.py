@@ -10,7 +10,7 @@ from datapipe.pipeline import Pipeline
 from datapipe.registry import registry
 from datapipe.schema import Field, Schema, infer_schema
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 __all__ = [
     "Cache",
