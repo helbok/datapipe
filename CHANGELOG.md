@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.4.0] - 2021-09-08
+
+### Added
+
+- Disk-backed stage cache.
+- Counters and timers.
+- Built-in steps registered in the registry.
+- CLI `nodes` command with rich output.
+
+### Changed
+
+- CI now reports coverage.
+
+
 ## [0.3.0] - 2020-12-01
 
 ### Added
