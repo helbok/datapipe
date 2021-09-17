@@ -73,3 +73,7 @@ This section covers error handling with runnable examples.
 Wrap an expensive stage with a `Cache` to reuse its output across runs. Cache
 keys are content-addressed from the stage name and its parameters, so changing
 an input parameter naturally invalidates the entry.
+
+## schema inference
+
+This section covers schema inference with runnable examples.
