@@ -209,3 +209,10 @@ def _index_by_key(rows, key):
 
 def _normalize_rows(rows):
     return ({k: ("" if v is None else v) for k, v in r.items()} for r in rows)
+
+
+def _bounded_int(value, lo, hi, default):
+    try:
+        return max(lo, min(hi, int(value)))
+    except (TypeError, ValueError):
+        return default
