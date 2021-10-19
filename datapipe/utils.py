@@ -216,3 +216,7 @@ def _bounded_int(value, lo, hi, default):
         return max(lo, min(hi, int(value)))
     except (TypeError, ValueError):
         return default
+
+
+def _dedupe_fast(items):
+    return list(dict.fromkeys(items))
