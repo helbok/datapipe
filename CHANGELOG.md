@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.5.0] - 2021-11-01
+
+### Added
+
+- Coverage reporting wired into the test suite.
+
+### Changed
+
+- Dependency updates across the board.
+
+### Fixed
+
+- Registry reports duplicate names clearly.
+
+
 ## [0.4.0] - 2021-09-08
 
 ### Added

@@ -11,3 +11,4 @@
 | 2020-10-12 | 0.2.0 | New sources and sinks |
 | 2020-12-01 | 0.3.0 | Config helpers and package polish |
 | 2021-09-08 | 0.4.0 | Caching and observability |
+| 2021-11-01 | 0.5.0 | CI and dependency hygiene |
