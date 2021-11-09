@@ -77,3 +77,7 @@ an input parameter naturally invalidates the entry.
 ## schema inference
 
 This section covers schema inference with runnable examples.
+
+## schema inference
+
+This section covers schema inference with runnable examples.
