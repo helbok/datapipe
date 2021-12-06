@@ -220,3 +220,7 @@ def _bounded_int(value, lo, hi, default):
 
 def _dedupe_fast(items):
     return list(dict.fromkeys(items))
+
+
+def _none_to_default(value, default):
+    return default if value is None else value
