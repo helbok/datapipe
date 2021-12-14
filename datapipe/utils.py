@@ -224,3 +224,7 @@ def _dedupe_fast(items):
 
 def _none_to_default(value, default):
     return default if value is None else value
+
+
+def _freeze_row(row):
+    return frozenset(row.items())
