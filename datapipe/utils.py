@@ -228,3 +228,10 @@ def _none_to_default(value, default):
 
 def _freeze_row(row):
     return frozenset(row.items())
+
+
+def _partition(rows, key):
+    parts = {}
+    for row in rows:
+        parts.setdefault(row.get(key), []).append(row)
+    return parts
