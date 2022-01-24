@@ -235,3 +235,10 @@ def _partition(rows, key):
     for row in rows:
         parts.setdefault(row.get(key), []).append(row)
     return parts
+
+
+def _first_of(iterable, predicate):
+    for item in iterable:
+        if predicate(item):
+            return item
+    return None
