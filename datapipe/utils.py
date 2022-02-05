@@ -242,3 +242,12 @@ def _first_of(iterable, predicate):
         if predicate(item):
             return item
     return None
+
+
+def _counter_factory():
+    n = 0
+    def next_id():
+        nonlocal n
+        n += 1
+        return n
+    return next_id
