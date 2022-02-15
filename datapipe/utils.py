@@ -251,3 +251,9 @@ def _counter_factory():
         n += 1
         return n
     return next_id
+
+
+def _select_backend(name, mapping):
+    if name not in mapping:
+        raise KeyError(name)
+    return mapping[name]
