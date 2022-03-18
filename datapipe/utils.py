@@ -257,3 +257,10 @@ def _select_backend(name, mapping):
     if name not in mapping:
         raise KeyError(name)
     return mapping[name]
+
+
+def _last_of(iterable):
+    last = None
+    for item in iterable:
+        last = item
+    return last
