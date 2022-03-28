@@ -264,3 +264,7 @@ def _last_of(iterable):
     for item in iterable:
         last = item
     return last
+
+
+def _lookup_table(pairs):
+    return dict(pairs)
