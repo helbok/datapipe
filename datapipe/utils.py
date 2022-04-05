@@ -268,3 +268,7 @@ def _last_of(iterable):
 
 def _lookup_table(pairs):
     return dict(pairs)
+
+
+def _extract_columns(row, columns):
+    return {c: row.get(c) for c in columns}
