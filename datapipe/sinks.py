@@ -49,8 +49,13 @@ def write_csv(location, **options):
 def write_json(location, **options):
     def _write(rows):
         data = list(rows)
-        with open(location, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, default=str)
+        try:
+            import orjson
+            with open(location, "wb") as f:
+                f.write(orjson.dumps(data, option=orjson.OPT_INDENT_2))
+        except ImportError:
+            with open(location, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, default=str)
         yield {"rows_written": len(data)}
     return _write
 
