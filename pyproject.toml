@@ -48,6 +48,10 @@ dev = [
     "coverage >= 6.0",
 ]
 
+json = [
+    "orjson >= 3.6.0",
+]
+
 [project.scripts]
 datapipe = "datapipe.cli:main"
 
