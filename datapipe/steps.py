@@ -75,3 +75,24 @@ def make_sort(key, reverse=False, **options):
         yield from buffered
 
     return _sort
+
+
+def make_dedupe(key=None, **options):
+    def _dedupe(rows):
+        seen = set()
+        for row in rows:
+            if key:
+                marker = tuple(row.get(k) for k in key)
+            else:
+                marker = tuple(sorted((k, str(v)) for k, v in row.items()))
+            if marker in seen:
+                continue
+            seen.add(marker)
+            yield row
+    return _dedupe
+
+
+def make_union(**options):
+    def _union(rows):
+        yield from rows
+    return _union
