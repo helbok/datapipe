@@ -272,3 +272,25 @@ def _lookup_table(pairs):
 
 def _extract_columns(row, columns):
     return {c: row.get(c) for c in columns}
+
+
+def coerce_scalar(value, target="string"):
+    if target == "string":
+        return str(value)
+    if target == "integer":
+        return int(value)
+    if target == "number":
+        return float(value)
+    if target == "boolean":
+        return coerce_bool(value)
+    return value
+
+
+def parse_number(value):
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            return value
