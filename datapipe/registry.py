@@ -30,13 +30,15 @@ registry = Registry()
 
 
 def register_builtins():
-    from datapipe.steps import (make_aggregate, make_filter, make_map,
-                                make_select, make_sort)
+    from datapipe.steps import (make_aggregate, make_dedupe, make_filter,
+                                make_map, make_select, make_sort, make_union)
     registry.register("map", make_map)
     registry.register("filter", make_filter)
     registry.register("select", make_select)
     registry.register("aggregate", make_aggregate)
     registry.register("sort", make_sort)
+    registry.register("dedupe", make_dedupe)
+    registry.register("union", make_union)
 
 
 register_builtins()
