@@ -39,8 +39,6 @@ def stable_id(value: str) -> str:
 
 def coerce_bool(value: Any) -> bool:
     """Coerce a loosely-typed value to bool."""
-    if isinstance(value, bool):
-        return value
     if isinstance(value, str):
         return value.strip().lower() in ("1", "true", "yes", "on")
     return bool(value)
