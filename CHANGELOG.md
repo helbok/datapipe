@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.6.0] - 2022-07-18
+
+### Added
+
+- Deduplicate and union steps.
+- Scalar coercion helpers.
+
+### Changed
+
+- JSON sinks now use orjson when available.
+
+
 ## [0.5.0] - 2021-11-01
 
 ### Added
