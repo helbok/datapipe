@@ -93,3 +93,7 @@ This section covers error handling with runnable examples.
 
 The `dedupe` step drops rows whose key already appeared earlier in the stream.
 Pass `key=["id"]` to key on a column, or omit it to treat whole rows as the key.
+
+## schema inference
+
+This section covers schema inference with runnable examples.
