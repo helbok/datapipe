@@ -23,7 +23,7 @@ dependencies = [
 
 [project.optional-dependencies]
 csv = [
-    "python-dateutil >= 2.8.1",
+    "python-dateutil >= 2.8.2",
 ]
 sql = [
     "sqlalchemy >= 1.4.0",
