@@ -292,3 +292,8 @@ def parse_number(value):
             return float(value)
         except (TypeError, ValueError):
             return value
+
+
+def _unique_key(value):
+    import hashlib
+    return hashlib.sha1(repr(value).encode("utf-8")).hexdigest()[:12]
