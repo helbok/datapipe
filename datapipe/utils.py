@@ -297,3 +297,7 @@ def parse_number(value):
 def _unique_key(value):
     import hashlib
     return hashlib.sha1(repr(value).encode("utf-8")).hexdigest()[:12]
+
+
+def _slice_chunk(items, size):
+    return [items[i:i + size] for i in range(0, len(items), size)]
