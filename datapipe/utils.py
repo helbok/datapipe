@@ -301,3 +301,7 @@ def _unique_key(value):
 
 def _slice_chunk(items, size):
     return [items[i:i + size] for i in range(0, len(items), size)]
+
+
+def _apply_mapping(row, mapping):
+    return {mapping.get(k, k): v for k, v in row.items()}
