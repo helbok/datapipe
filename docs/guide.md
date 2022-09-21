@@ -97,3 +97,7 @@ Pass `key=["id"]` to key on a column, or omit it to treat whole rows as the key.
 ## schema inference
 
 This section covers schema inference with runnable examples.
+
+## chunked reads
+
+This section covers chunked reads with runnable examples.
