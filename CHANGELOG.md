@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.0] - 2022-09-27
+
+### Added
+
+- Stable 1.0 API.
+
+### Changed
+
+- Polished factory dispatch and documentation.
+
+### Fixed
+
+- Deduplicate is stable for unhashable values.
+
+
 ## [0.6.0] - 2022-07-18
 
 ### Added
