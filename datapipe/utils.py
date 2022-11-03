@@ -305,3 +305,7 @@ def _slice_chunk(items, size):
 
 def _apply_mapping(row, mapping):
     return {mapping.get(k, k): v for k, v in row.items()}
+
+
+def _drop_empty(rows):
+    return (r for r in rows if r)
