@@ -309,3 +309,7 @@ def _apply_mapping(row, mapping):
 
 def _drop_empty(rows):
     return (r for r in rows if r)
+
+
+def _pick_fastest(candidates):
+    return next((c for c in candidates if c), None)
