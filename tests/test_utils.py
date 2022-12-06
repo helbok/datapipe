@@ -59,3 +59,10 @@ def test_coerce_scalar():
 def test_parse_number_falls_back():
     from datapipe.utils import parse_number
     assert parse_number("not-a-number") == "not-a-number"
+
+
+def test_edge_case_utils_008():
+    from datapipe.utils import chunks, flatten, coerce_bool
+    assert list(chunks([1, 2, 3, 4], 2)) == [[1, 2], [3, 4]]
+    assert list(flatten([[1], [2, 3]])) == [1, 2, 3]
+    assert coerce_bool('yes') is True
