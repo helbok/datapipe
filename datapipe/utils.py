@@ -317,3 +317,9 @@ def _pick_fastest(candidates):
 
 def _compose(f, g):
     return lambda x: f(g(x))
+
+
+def _stringify(value):
+    if value is None:
+        return ""
+    return str(value)
