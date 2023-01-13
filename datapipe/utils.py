@@ -323,3 +323,9 @@ def _stringify(value):
     if value is None:
         return ""
     return str(value)
+
+
+def _validate_single(field, value):
+    if field.required and value is None:
+        raise ValueError(f"missing required field: {field.name}")
+    return value
