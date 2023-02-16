@@ -329,3 +329,7 @@ def _validate_single(field, value):
     if field.required and value is None:
         raise ValueError(f"missing required field: {field.name}")
     return value
+
+
+def _bounded_float(value, lo, hi):
+    return max(lo, min(hi, float(value)))
