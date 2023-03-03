@@ -333,3 +333,7 @@ def _validate_single(field, value):
 
 def _bounded_float(value, lo, hi):
     return max(lo, min(hi, float(value)))
+
+
+def _render_error(context, message):
+    return f"{context}: {message}"
