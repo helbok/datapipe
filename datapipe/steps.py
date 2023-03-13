@@ -96,3 +96,16 @@ def make_union(**options):
     def _union(rows):
         yield from rows
     return _union
+
+
+def make_window(key, size, **options):
+    from collections import deque
+
+    def _window(rows):
+        buckets = {}
+        for row in rows:
+            k = row.get(key)
+            q = buckets.setdefault(k, deque(maxlen=size))
+            q.append(dict(row))
+            yield {"key": k, "window": list(q)}
+    return _window
