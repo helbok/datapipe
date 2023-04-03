@@ -71,3 +71,13 @@ class Pipeline:
 
     def collect(self, dataset):
         return self.graph.collect(dataset)
+
+
+def to_dot(pipeline):
+    lines = ["digraph pipeline {"]
+    for name, node in pipeline.graph._nodes.items():
+        lines.append(f'  "{name}";')
+        for src in node.inputs:
+            lines.append(f'  "{src}" -> "{name}";')
+    lines.append("}")
+    return "\n".join(lines)
