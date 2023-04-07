@@ -33,3 +33,15 @@ def test_edge_case_pipeline_020():
     from datapipe.pipeline import Pipeline
     pipe = Pipeline('t')
     assert pipe.graph is not None
+
+
+def test_to_dot_contains_edges():
+    from datapipe.core import Dataset, Node
+    from datapipe.pipeline import Pipeline, to_dot
+    pipe = Pipeline("t")
+    src = Node("src", lambda rows: rows)
+    pipe.graph.add_node(src)
+    pipe.graph.add_node(Node("map", lambda rows: rows, inputs=["src"]))
+    dot = to_dot(pipe)
+    assert 'digraph pipeline {' in dot
+    assert '"src" -> "map";' in dot
