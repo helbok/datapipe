@@ -68,7 +68,7 @@ def make_aggregate(group_by, reduce, **options):
     return _aggregate
 
 
-def make_sort(key, reverse=False, **options):
+def make_sort(key, *, reverse=False, **options):
     def _sort(rows):
         buffered = list(rows)
         buffered.sort(key=lambda r: r.get(key), reverse=reverse)
