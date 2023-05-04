@@ -117,3 +117,8 @@ This section covers schema inference with worked examples.
 ## error handling
 
 This section covers error handling with runnable examples.
+## Windowing
+
+`window` keeps a bounded history of recent rows per key, which is useful for
+moving averages and other sliding-window computations without loading a whole
+partition into memory.
