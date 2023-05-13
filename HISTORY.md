@@ -14,3 +14,4 @@
 | 2021-11-01 | 0.5.0 | CI and dependency hygiene |
 | 2022-07-18 | 0.6.0 | Performance and set-style steps |
 | 2022-09-27 | 1.0.0 | First stable release |
+| 2023-05-12 | 1.1.0 | Windowing and visualisation |

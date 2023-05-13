@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.0] - 2023-05-12
+
+### Added
+
+- Windowed aggregation step.
+- Graphviz DOT export.
+
+### Changed
+
+- Sort keys are now keyword-only.
+
+
 ## [1.0.0] - 2022-09-27
 
 ### Added
