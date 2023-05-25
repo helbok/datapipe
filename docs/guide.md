@@ -122,3 +122,7 @@ This section covers error handling with runnable examples.
 `window` keeps a bounded history of recent rows per key, which is useful for
 moving averages and other sliding-window computations without loading a whole
 partition into memory.
+
+## schema inference
+
+This section covers schema inference with runnable examples.
