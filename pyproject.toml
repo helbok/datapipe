@@ -26,7 +26,7 @@ csv = [
     "python-dateutil >= 2.9.0.post0",
 ]
 sql = [
-    "sqlalchemy >= 1.4.18",
+    "sqlalchemy >= 1.4.20",
 ]
 test = [
     "pytest >= 6.0.0",
