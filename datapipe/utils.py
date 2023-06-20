@@ -337,3 +337,12 @@ def _bounded_float(value, lo, hi):
 
 def _render_error(context, message):
     return f"{context}: {message}"
+
+
+def _enumerate_columns(rows):
+    columns = []
+    for row in rows:
+        for k in row:
+            if k not in columns:
+                columns.append(k)
+    return columns
