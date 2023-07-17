@@ -346,3 +346,7 @@ def _enumerate_columns(rows):
             if k not in columns:
                 columns.append(k)
     return columns
+
+
+def _open_text(path, mode="r"):
+    return open(path, mode, encoding="utf-8")
