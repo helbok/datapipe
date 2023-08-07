@@ -350,3 +350,13 @@ def _enumerate_columns(rows):
 
 def _open_text(path, mode="r"):
     return open(path, mode, encoding="utf-8")
+
+
+def _dedupe_preserve_order(items):
+    seen = set()
+    out = []
+    for it in items:
+        if it not in seen:
+            seen.add(it)
+            out.append(it)
+    return out
