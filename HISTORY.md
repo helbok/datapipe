@@ -15,3 +15,4 @@
 | 2022-07-18 | 0.6.0 | Performance and set-style steps |
 | 2022-09-27 | 1.0.0 | First stable release |
 | 2023-05-12 | 1.1.0 | Windowing and visualisation |
+| 2023-08-28 | 1.2.0 | Hardening release |
