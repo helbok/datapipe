@@ -360,3 +360,7 @@ def _dedupe_preserve_order(items):
             seen.add(it)
             out.append(it)
     return out
+
+
+def _clamp_number(value, lo, hi):
+    return max(lo, min(hi, value))
