@@ -364,3 +364,8 @@ def _dedupe_preserve_order(items):
 
 def _clamp_number(value, lo, hi):
     return max(lo, min(hi, value))
+
+
+def _format_duration(seconds):
+    seconds = int(seconds)
+    return f"{seconds // 60}m{seconds % 60}s"
