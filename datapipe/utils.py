@@ -369,3 +369,7 @@ def _clamp_number(value, lo, hi):
 def _format_duration(seconds):
     seconds = int(seconds)
     return f"{seconds // 60}m{seconds % 60}s"
+
+
+def _safe_div(a, b, default=0.0):
+    return a / b if b else default
