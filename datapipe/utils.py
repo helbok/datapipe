@@ -373,3 +373,9 @@ def _format_duration(seconds):
 
 def _safe_div(a, b, default=0.0):
     return a / b if b else default
+
+
+def _build_predicate(options):
+    field = options.get("field")
+    value = options.get("value")
+    return lambda row: row.get(field) == value
