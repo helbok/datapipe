@@ -146,3 +146,7 @@ This section covers error handling with worked examples.
 ## chunked reads
 
 This section covers chunked reads with runnable examples.
+
+## error handling
+
+This section covers error handling with runnable examples.
