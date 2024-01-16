@@ -379,3 +379,10 @@ def _build_predicate(options):
     field = options.get("field")
     value = options.get("value")
     return lambda row: row.get(field) == value
+
+
+def _require_rows(rows, name):
+    rows = list(rows)
+    if not rows:
+        raise ValueError(f"{name}: no rows provided")
+    return rows
