@@ -150,3 +150,7 @@ This section covers chunked reads with runnable examples.
 ## error handling
 
 This section covers error handling with runnable examples.
+
+## lazy evaluation
+
+This section covers lazy evaluation with worked examples.
