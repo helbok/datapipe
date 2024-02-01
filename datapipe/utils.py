@@ -386,3 +386,8 @@ def _require_rows(rows, name):
     if not rows:
         raise ValueError(f"{name}: no rows provided")
     return rows
+
+
+def _resolve_module(name):
+    import importlib
+    return importlib.import_module(name)
