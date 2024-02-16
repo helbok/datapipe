@@ -4,6 +4,7 @@ import json
 from typing import Any, Dict, Iterable, Iterator, List, Optional
 
 from datapipe.errors import SinkError
+from datapipe.io import atomic_write
 
 
 def create_sink(kind, location, **options):
@@ -51,11 +52,11 @@ def write_json(location, **options):
         data = list(rows)
         try:
             import orjson
-            with open(location, "wb") as f:
-                f.write(orjson.dumps(data, option=orjson.OPT_INDENT_2))
+            payload = orjson.dumps(data, option=orjson.OPT_INDENT_2)
+            atomic_write(location, payload, mode="wb")
         except ImportError:
-            with open(location, "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=2, default=str)
+            payload = json.dumps(data, indent=2, default=str)
+            atomic_write(location, payload)
         yield {"rows_written": len(data)}
     return _write
 
