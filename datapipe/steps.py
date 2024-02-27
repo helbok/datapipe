@@ -109,3 +109,16 @@ def make_window(key, size, **options):
             q.append(dict(row))
             yield {"key": k, "window": list(q)}
     return _window
+
+
+def make_batch(size, **options):
+    def _batch(rows):
+        buf = []
+        for row in rows:
+            buf.append(dict(row))
+            if len(buf) >= size:
+                yield buf
+                buf = []
+        if buf:
+            yield buf
+    return _batch
