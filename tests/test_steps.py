@@ -71,3 +71,10 @@ def test_edge_case_steps_014():
     from datapipe.steps import make_sort
     step = make_sort(key='n')
     assert list(step(iter([{'n': 2}, {'n': 1}]))) == [{'n': 1}, {'n': 2}]
+
+
+def test_batch_groups_rows():
+    from datapipe.steps import make_batch
+    step = make_batch(size=2)
+    rows = [{"n": 1}, {"n": 2}, {"n": 3}]
+    assert list(step(iter(rows))) == [[{"n": 1}, {"n": 2}], [{"n": 3}]]
