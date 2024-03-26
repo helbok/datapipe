@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.3.0] - 2024-03-26
+
+### Added
+
+- Atomic file-write helper.
+- Batching step.
+
+### Changed
+
+- JSON sinks now write atomically.
+
+
 ## [1.2.0] - 2023-08-28
 
 ### Added
