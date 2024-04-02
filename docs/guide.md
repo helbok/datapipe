@@ -154,3 +154,7 @@ This section covers error handling with runnable examples.
 ## lazy evaluation
 
 This section covers lazy evaluation with worked examples.
+
+## schema inference
+
+This section covers schema inference with runnable examples.
