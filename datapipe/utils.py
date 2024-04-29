@@ -391,3 +391,7 @@ def _require_rows(rows, name):
 def _resolve_module(name):
     import importlib
     return importlib.import_module(name)
+
+
+def _strip_row_keys(row):
+    return {str(k).strip(): v for k, v in row.items()}
