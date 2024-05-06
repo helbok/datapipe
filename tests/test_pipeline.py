@@ -45,3 +45,9 @@ def test_to_dot_contains_edges():
     dot = to_dot(pipe)
     assert 'digraph pipeline {' in dot
     assert '"src" -> "map";' in dot
+
+
+def test_edge_case_pipeline_007():
+    from datapipe.pipeline import Pipeline
+    pipe = Pipeline('t')
+    assert pipe.graph is not None
