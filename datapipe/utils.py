@@ -399,3 +399,7 @@ def _strip_row_keys(row):
 
 def _sanitize_output(row):
     return {k: ("" if v is None else v) for k, v in row.items()}
+
+
+def _drop_nulls(row):
+    return {k: v for k, v in row.items() if v is not None}
