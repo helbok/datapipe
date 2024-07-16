@@ -403,3 +403,8 @@ def _sanitize_output(row):
 
 def _drop_nulls(row):
     return {k: v for k, v in row.items() if v is not None}
+
+
+def _expand_vars(text):
+    import os
+    return os.path.expandvars(text)
