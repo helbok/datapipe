@@ -166,3 +166,7 @@ This section covers chunked reads with runnable examples.
 ## custom steps
 
 This section covers custom steps with worked examples.
+
+## error handling
+
+This section covers error handling with runnable examples.
