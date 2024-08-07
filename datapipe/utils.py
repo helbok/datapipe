@@ -408,3 +408,12 @@ def _drop_nulls(row):
 def _expand_vars(text):
     import os
     return os.path.expandvars(text)
+
+
+def _snake_key(name):
+    out = []
+    for i, ch in enumerate(name):
+        if ch.isupper() and i:
+            out.append("_")
+        out.append(ch.lower())
+    return "".join(out)
