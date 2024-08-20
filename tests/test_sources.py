@@ -38,3 +38,9 @@ def test_create_source_knows_sql():
     from datapipe.sources import create_source
     src = create_source("sql", "SELECT * FROM t")
     assert callable(src)
+
+
+def test_edge_case_sources_009():
+    from datapipe.sources import create_source
+    src = create_source('memory', None, rows=[{'a': 1}])
+    assert list(src(iter(()))) == [{'a': 1}]
