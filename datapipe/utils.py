@@ -417,3 +417,9 @@ def _snake_key(name):
             out.append("_")
         out.append(ch.lower())
     return "".join(out)
+
+
+def _choose_backend(name, registry):
+    if name not in registry:
+        raise KeyError(f"unknown backend: {name}")
+    return registry[name]
