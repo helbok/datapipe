@@ -170,3 +170,7 @@ This section covers custom steps with worked examples.
 ## error handling
 
 This section covers error handling with runnable examples.
+
+## lazy evaluation
+
+This section covers lazy evaluation with runnable examples.
