@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.0] - 2024-10-02
+
+### Added
+
+- New 2.x line.
+
+### Changed
+
+- Sink implementations consolidated around the io helper.
+
+
 ## [1.3.0] - 2024-03-26
 
 ### Added
