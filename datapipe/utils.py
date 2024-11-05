@@ -423,3 +423,7 @@ def _choose_backend(name, registry):
     if name not in registry:
         raise KeyError(f"unknown backend: {name}")
     return registry[name]
+
+
+def _is_blank(value):
+    return value is None or (isinstance(value, str) and not value.strip())
