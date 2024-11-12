@@ -178,3 +178,7 @@ This section covers lazy evaluation with runnable examples.
 ## schema inference
 
 This section covers schema inference with runnable examples.
+
+## pipeline branching
+
+This section covers pipeline branching with worked examples.
