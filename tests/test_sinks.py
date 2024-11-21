@@ -41,3 +41,11 @@ def test_write_json_falls_back_without_orjson():
     assert result == [{"rows_written": 1}]
     with open(path, encoding="utf-8") as f:
         assert json.load(f) == [{"id": 1}]
+
+
+def test_edge_case_sinks_011():
+    from datapipe.sinks import create_sink
+    buf = []
+    sink = create_sink('memory', None, buffer=buf)
+    list(sink(iter([{'a': 1}])))
+    assert buf == [{'a': 1}]
