@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [2.1.0] - 2025-01-06
+
+### Added
+
+- Batching step registered and tested.
+
+### Changed
+
+- Dependency updates.
+
+### Fixed
+
+- Atomic write cleans up temp files on failure.
+
+
 ## [2.0.0] - 2024-10-02
 
 ### Added

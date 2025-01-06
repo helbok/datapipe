@@ -18,3 +18,4 @@
 | 2023-08-28 | 1.2.0 | Hardening release |
 | 2024-03-26 | 1.3.0 | Atomic writes and batching |
 | 2024-10-02 | 2.0.0 | Second major release |
+| 2025-01-06 | 2.1.0 | Minor 2.x release |
