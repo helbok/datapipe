@@ -186,3 +186,7 @@ This section covers pipeline branching with worked examples.
 ## chunked reads
 
 This section covers chunked reads with runnable examples.
+
+## schema inference
+
+This section covers schema inference with runnable examples.
