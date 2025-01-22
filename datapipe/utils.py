@@ -427,3 +427,9 @@ def _choose_backend(name, registry):
 
 def _is_blank(value):
     return value is None or (isinstance(value, str) and not value.strip())
+
+
+def _normalize_bool(value):
+    if isinstance(value, str):
+        return value.strip().lower() in ("1", "true", "yes", "on")
+    return bool(value)
