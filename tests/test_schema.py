@@ -16,3 +16,9 @@ def test_infer_schema_from_rows():
         "id": "integer",
         "name": "string",
     }
+
+
+def test_edge_case_schema_013():
+    from datapipe.schema import infer_schema
+    s = infer_schema([{'n': 1}])
+    assert s.field('n').type == 'integer'
