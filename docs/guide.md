@@ -194,3 +194,7 @@ This section covers schema inference with runnable examples.
 ## streaming mode
 
 This section covers streaming mode with worked examples.
+
+## chunked reads
+
+This section covers chunked reads with runnable examples.
