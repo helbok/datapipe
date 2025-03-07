@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [2.2.0] - 2025-03-07
+
+### Added
+
+- Documentation for atomic writes.
+
+### Fixed
+
+- Batching emits the final partial batch.
+
+
 ## [2.1.0] - 2025-01-06
 
 ### Added
