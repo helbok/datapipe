@@ -9,7 +9,7 @@ description = "A composable, declarative data transformation and pipeline librar
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "ErvinTse", email = "36804877+helbok@users.noreply.github.com" }]
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 keywords = ["data", "pipeline", "etl", "transformation"]
 classifiers = [
     "Development Status :: 3 - Alpha",
