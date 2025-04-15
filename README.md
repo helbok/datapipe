@@ -56,6 +56,15 @@ $ pip install -e ".[test]"
 $ pytest
 ```
 
+## Compatibility
+
+`datapipe` supports Python 3.9 and newer.
+
+## Documentation
+
+- [API reference](docs/api.md)
+- [User guide](docs/guide.md)
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
