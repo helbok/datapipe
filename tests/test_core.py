@@ -145,3 +145,12 @@ def test_edge_case_core_002():
     g.add_node(n)
     assert g.node('n') is n
     assert list(n.run(iter([{'a': 1}]))) == [{'a': 1}]
+
+
+def test_edge_case_core_002():
+    from datapipe.core import Graph, Node, identity
+    g = Graph()
+    n = Node('n', identity)
+    g.add_node(n)
+    assert g.node('n') is n
+    assert list(n.run(iter([{'a': 1}]))) == [{'a': 1}]
