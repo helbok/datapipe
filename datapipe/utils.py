@@ -433,3 +433,7 @@ def _normalize_bool(value):
     if isinstance(value, str):
         return value.strip().lower() in ("1", "true", "yes", "on")
     return bool(value)
+
+
+def _ms_timestamp(value):
+    return int(value.timestamp() * 1000) if hasattr(value, "timestamp") else int(value)
