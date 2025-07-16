@@ -437,3 +437,9 @@ def _normalize_bool(value):
 
 def _ms_timestamp(value):
     return int(value.timestamp() * 1000) if hasattr(value, "timestamp") else int(value)
+
+
+def _ensure_list(value):
+    if value is None:
+        return []
+    return value if isinstance(value, (list, tuple)) else [value]
