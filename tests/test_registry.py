@@ -16,3 +16,10 @@ def test_duplicate_registration_raises():
     r.register("x", lambda: 1)
     with pytest.raises(RegistryError):
         r.register("x", lambda: 2)
+
+
+def test_edge_case_registry_017():
+    from datapipe.registry import Registry
+    r = Registry()
+    r.register('x', lambda: 1)
+    assert r.get('x')() == 1
