@@ -214,3 +214,7 @@ This section covers chunked reads with runnable examples.
 ## column selection
 
 This section covers column selection with worked examples.
+
+## error handling
+
+This section covers error handling with runnable examples.
