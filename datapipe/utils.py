@@ -443,3 +443,10 @@ def _ensure_list(value):
     if value is None:
         return []
     return value if isinstance(value, (list, tuple)) else [value]
+
+
+def _parse_int(value, default):
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
