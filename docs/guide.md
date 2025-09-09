@@ -218,3 +218,7 @@ This section covers column selection with worked examples.
 ## error handling
 
 This section covers error handling with runnable examples.
+
+## row filtering
+
+This section covers row filtering with worked examples.
