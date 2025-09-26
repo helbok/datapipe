@@ -222,3 +222,7 @@ This section covers error handling with runnable examples.
 ## row filtering
 
 This section covers row filtering with worked examples.
+
+## lazy evaluation
+
+This section covers lazy evaluation with runnable examples.
