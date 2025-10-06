@@ -57,3 +57,9 @@ def test_edge_case_pipeline_020():
     from datapipe.pipeline import Pipeline
     pipe = Pipeline('t')
     assert pipe.graph is not None
+
+
+def test_edge_case_pipeline_020():
+    from datapipe.pipeline import Pipeline
+    pipe = Pipeline('t')
+    assert pipe.graph is not None
