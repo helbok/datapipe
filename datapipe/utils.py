@@ -450,3 +450,10 @@ def _parse_int(value, default):
         return int(value)
     except (TypeError, ValueError):
         return default
+
+
+def _first_row(rows):
+    for row in rows:
+        if row:
+            return row
+    return None
