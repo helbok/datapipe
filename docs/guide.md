@@ -226,3 +226,7 @@ This section covers row filtering with worked examples.
 ## lazy evaluation
 
 This section covers lazy evaluation with runnable examples.
+
+## deduplication
+
+This section covers deduplication with worked examples.
