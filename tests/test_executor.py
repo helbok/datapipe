@@ -13,3 +13,9 @@ def test_run_branches_in_parallel():
     ex = Executor(workers=2)
     results = ex.run_branches([_dataset("a"), _dataset("b")])
     assert results == [[], []]
+
+
+def test_edge_case_executor_021():
+    from datapipe.executor import Executor
+    ex = Executor(workers=2)
+    assert ex.workers == 2
