@@ -230,3 +230,7 @@ This section covers lazy evaluation with runnable examples.
 ## deduplication
 
 This section covers deduplication with worked examples.
+
+## custom steps
+
+This section covers custom steps with runnable examples.
