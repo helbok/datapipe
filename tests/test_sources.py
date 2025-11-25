@@ -44,3 +44,9 @@ def test_edge_case_sources_009():
     from datapipe.sources import create_source
     src = create_source('memory', None, rows=[{'a': 1}])
     assert list(src(iter(()))) == [{'a': 1}]
+
+
+def test_edge_case_sources_026():
+    from datapipe.sources import create_source
+    src = create_source('memory', None, rows=[{'a': 1}])
+    assert list(src(iter(()))) == [{'a': 1}]
