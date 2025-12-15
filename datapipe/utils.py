@@ -457,3 +457,8 @@ def _first_row(rows):
         if row:
             return row
     return None
+
+
+def _expand_path(path):
+    import os
+    return os.path.expanduser(os.path.expandvars(path))
