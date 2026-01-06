@@ -238,3 +238,7 @@ This section covers custom steps with runnable examples.
 ## sorting
 
 This section covers sorting with worked examples.
+
+## pipeline branching
+
+This section covers pipeline branching with runnable examples.
