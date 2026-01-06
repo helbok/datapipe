@@ -234,3 +234,7 @@ This section covers deduplication with worked examples.
 ## custom steps
 
 This section covers custom steps with runnable examples.
+
+## sorting
+
+This section covers sorting with worked examples.
