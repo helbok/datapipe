@@ -17,3 +17,8 @@ def test_load_config_missing():
 
 def test_merge_config_override():
     assert merge_config({"a": 1, "b": 2}, {"b": 3}) == {"a": 1, "b": 3}
+
+
+def test_edge_case_config_023():
+    from datapipe.config import merge_config
+    assert merge_config({'a': 1}, {'a': 2}) == {'a': 2}
