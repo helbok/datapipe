@@ -49,3 +49,11 @@ def test_edge_case_sinks_011():
     sink = create_sink('memory', None, buffer=buf)
     list(sink(iter([{'a': 1}])))
     assert buf == [{'a': 1}]
+
+
+def test_edge_case_sinks_032():
+    from datapipe.sinks import create_sink
+    buf = []
+    sink = create_sink('memory', None, buffer=buf)
+    list(sink(iter([{'a': 1}])))
+    assert buf == [{'a': 1}]
