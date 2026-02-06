@@ -462,3 +462,8 @@ def _first_row(rows):
 def _expand_path(path):
     import os
     return os.path.expanduser(os.path.expandvars(path))
+
+
+def _transient_exc(exc):
+    import socket
+    return isinstance(exc, (TimeoutError, ConnectionError, socket.timeout))
