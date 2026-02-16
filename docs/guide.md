@@ -242,3 +242,7 @@ This section covers sorting with worked examples.
 ## pipeline branching
 
 This section covers pipeline branching with runnable examples.
+
+## joins and merges
+
+This section covers joins and merges with worked examples.
