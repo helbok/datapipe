@@ -246,3 +246,7 @@ This section covers pipeline branching with runnable examples.
 ## joins and merges
 
 This section covers joins and merges with worked examples.
+
+## streaming mode
+
+This section covers streaming mode with runnable examples.
