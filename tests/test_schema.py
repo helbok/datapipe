@@ -22,3 +22,9 @@ def test_edge_case_schema_013():
     from datapipe.schema import infer_schema
     s = infer_schema([{'n': 1}])
     assert s.field('n').type == 'integer'
+
+
+def test_edge_case_schema_038():
+    from datapipe.schema import infer_schema
+    s = infer_schema([{'n': 1}])
+    assert s.field('n').type == 'integer'
