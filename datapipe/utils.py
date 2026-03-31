@@ -467,3 +467,13 @@ def _expand_path(path):
 def _transient_exc(exc):
     import socket
     return isinstance(exc, (TimeoutError, ConnectionError, socket.timeout))
+
+
+def _dedupe_columns(columns):
+    seen = set()
+    out = []
+    for c in columns:
+        if c not in seen:
+            seen.add(c)
+            out.append(c)
+    return out
