@@ -250,3 +250,7 @@ This section covers joins and merges with worked examples.
 ## streaming mode
 
 This section covers streaming mode with runnable examples.
+
+## windowing
+
+This section covers windowing with worked examples.
