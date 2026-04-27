@@ -254,3 +254,7 @@ This section covers streaming mode with runnable examples.
 ## windowing
 
 This section covers windowing with worked examples.
+
+## type coercion
+
+This section covers type coercion with runnable examples.
