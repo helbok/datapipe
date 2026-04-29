@@ -22,3 +22,10 @@ def test_edge_case_validation_015():
     from datapipe.validation import validate_rows
     s = Schema('s', [Field('id', required=True)])
     assert list(validate_rows(iter([{'id': 1}]), s)) == [{'id': 1}]
+
+
+def test_edge_case_validation_044():
+    from datapipe.schema import Field, Schema
+    from datapipe.validation import validate_rows
+    s = Schema('s', [Field('id', required=True)])
+    assert list(validate_rows(iter([{'id': 1}]), s)) == [{'id': 1}]
