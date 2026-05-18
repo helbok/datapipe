@@ -477,3 +477,10 @@ def _dedupe_columns(columns):
             seen.add(c)
             out.append(c)
     return out
+
+
+def _coalesce(*values):
+    for v in values:
+        if v is not None and v != "":
+            return v
+    return None
