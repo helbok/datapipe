@@ -258,3 +258,7 @@ This section covers windowing with worked examples.
 ## type coercion
 
 This section covers type coercion with runnable examples.
+
+## caching
+
+This section covers caching with worked examples.
