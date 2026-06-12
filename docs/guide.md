@@ -262,3 +262,7 @@ This section covers type coercion with runnable examples.
 ## caching
 
 This section covers caching with worked examples.
+
+## column selection
+
+This section covers column selection with runnable examples.
