@@ -23,3 +23,10 @@ def test_edge_case_registry_017():
     r = Registry()
     r.register('x', lambda: 1)
     assert r.get('x')() == 1
+
+
+def test_edge_case_registry_050():
+    from datapipe.registry import Registry
+    r = Registry()
+    r.register('x', lambda: 1)
+    assert r.get('x')() == 1
