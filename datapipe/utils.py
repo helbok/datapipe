@@ -484,3 +484,7 @@ def _coalesce(*values):
         if v is not None and v != "":
             return v
     return None
+
+
+def _chunk_indices(total, size):
+    return range(0, total, size)
