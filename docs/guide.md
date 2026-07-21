@@ -266,3 +266,7 @@ This section covers caching with worked examples.
 ## column selection
 
 This section covers column selection with runnable examples.
+
+## parallel execution
+
+This section covers parallel execution with worked examples.
