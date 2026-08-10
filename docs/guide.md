@@ -270,3 +270,7 @@ This section covers column selection with runnable examples.
 ## parallel execution
 
 This section covers parallel execution with worked examples.
+
+## row filtering
+
+This section covers row filtering with runnable examples.
