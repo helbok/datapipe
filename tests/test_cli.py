@@ -17,3 +17,8 @@ def test_nodes_command(capsys):
 def test_edge_case_cli_019():
     from datapipe.cli import main
     assert main(['version']) == 0
+
+
+def test_edge_case_cli_056():
+    from datapipe.cli import main
+    assert main(['version']) == 0
