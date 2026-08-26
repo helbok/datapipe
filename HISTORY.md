@@ -20,3 +20,4 @@
 | 2024-10-02 | 2.0.0 | Second major release |
 | 2025-01-06 | 2.1.0 | Minor 2.x release |
 | 2025-03-07 | 2.2.0 | Final 2.x release |
+| 2026-08-25 | 3.0.0 | Final major release |

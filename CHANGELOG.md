@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [3.0.0] - 2026-08-25
+
+### Added
+
+- Production/stable 3.0 line.
+
+### Changed
+
+- Python 3.7 and 3.8 are no longer supported.
+
+
 ## [2.2.0] - 2025-03-07
 
 ### Added
